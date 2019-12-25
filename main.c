@@ -30,7 +30,7 @@ int main(int argc, char * argv[]) {
         char * c = argv[1];
         while (*c != '\0')
         {
-            if (!isnumber(*c))
+            if (!isdigit(*c))
             {
                 fprintf(stderr, "Invalid decimal number\n");
                 valid_input = 0;
@@ -75,7 +75,7 @@ int main(int argc, char * argv[]) {
         char * c = argv[2];
         while (*c != '\0')
         {
-            if (!(isnumber(*c) || ('A' <= *c && *c <= 'F') || ('a' <= *c && *c <= 'f')))
+            if (!(isdigit(*c) || ('A' <= *c && *c <= 'F') || ('a' <= *c && *c <= 'f')))
             {
                 fprintf(stderr, "Invalid heximal number\n");
                 valid_input = 0;
